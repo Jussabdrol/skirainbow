@@ -1,0 +1,38 @@
+{
+  "name": "skirainbow",
+  "version": "1.0.0",
+  "description": "Ski Rainbow – a 2D ski racing game",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:mac": "electron-builder --mac dmg pkg",
+    "build:win": "electron-builder --win nsis",
+    "build:all": "electron-builder --mac dmg pkg --win nsis"
+  },
+  "build": {
+    "appId": "com.skirainbow.app",
+    "productName": "Ski Rainbow",
+    "files": [
+      "index.html",
+      "style.css",
+      "game.js",
+      "main.js"
+    ],
+    "mac": {
+      "category": "public.app-category.games",
+      "target": ["dmg", "pkg"]
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": true,
+      "installerIcon": null,
+      "uninstallerIcon": null
+    }
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  }
+}
