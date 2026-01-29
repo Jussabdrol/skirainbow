@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ski Rainbow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="gameCanvas" width="600" height="800"></canvas>
+    <div id="ui-overlay">
+      <div id="score-display">Score: <span id="score">0</span></div>
+      <div id="start-screen" class="screen">
+        <h1>🎿 Ski Rainbow 🌈</h1>
+        <p>Race down the snowy slope!<br>Dodge flying unicorns &amp; obstacles.<br>Reach the rainbow finish line!</p>
+        <p class="controls-hint">
+          ← → or A/D to steer<br>
+          SPACE to jump
+        </p>
+        <button id="startBtn">Start Race</button>
+      </div>
+      <div id="game-over-screen" class="screen hidden">
+        <h1 id="end-title">Race Over</h1>
+        <p>Final Score: <span id="final-score">0</span></p>
+        <button id="restartBtn">Race Again</button>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
